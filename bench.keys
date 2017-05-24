@@ -1,0 +1,14 @@
+# test keys for zabbix_agent_bench
+sockets.modver
+sockets.tcp.count
+sockets.tcp.count[ESTABLISHED]
+sockets.tcp.count[SYN_SENT]
+sockets.tcp.count[SYN_RECV]
+sockets.tcp.count[FIN_WAIT1]
+sockets.tcp.count[FIN_WAIT2]
+sockets.tcp.count[TIME_WAIT]
+sockets.tcp.count[CLOSE]
+sockets.tcp.count[CLOSE_WAIT]
+sockets.tcp.count[LAST_ACK]
+sockets.tcp.count[LISTEN]
+sockets.tcp.count[CLOSING]
