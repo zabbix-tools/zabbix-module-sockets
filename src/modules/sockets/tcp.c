@@ -39,7 +39,7 @@ int SOCKETS_TCP_COUNT(AGENT_REQUEST *request, AGENT_RESULT *result)
 	}
 
 	// validate state param
-	if (param_state = get_rparam(request, 0)) {
+	if ((param_state = get_rparam(request, 0))) {
 		for (char *c = param_state; c && *c; c++) {
 			*c = toupper(*c);
 		}
@@ -61,7 +61,7 @@ int SOCKETS_TCP_COUNT(AGENT_REQUEST *request, AGENT_RESULT *result)
 		return res;
 	}
 
-	fgets(buf, sizeof(buf), f);
+	fgets(buf, sizeof(buf), f); // discard headers
 	while (fgets(buf, sizeof(buf), f)) {
 		if (8 == sscanf(buf, "%i: %X:%X %X:%X %X %X:%X",
 										&skt.slot,

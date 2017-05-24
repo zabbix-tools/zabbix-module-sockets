@@ -49,7 +49,7 @@ returned.
 E.g.
 
     $ zabbix_get -s 127.0.0.1 -k sockets.tcp.count[listen]
-    2
+    sockets.tcp.count[listen]                     [u|6]
 
     $ netstat -tl4
     tcp        0      0 0.0.0.0:ssh             0.0.0.0:*               LISTEN
