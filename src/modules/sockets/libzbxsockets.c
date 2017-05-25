@@ -93,10 +93,10 @@ static int SOCKETS_COUNT(AGENT_REQUEST *request, AGENT_RESULT *result)
 
 static int SOCKETS_SENDQ(AGENT_REQUEST *request, AGENT_RESULT *result)
 {
-	return dispatch(request, result, STAT_COUNT);
+	return dispatch(request, result, STAT_SEND_QUEUE);
 }
 
 static int SOCKETS_RECVQ(AGENT_REQUEST *request, AGENT_RESULT *result)
 {
-	return dispatch(request, result, STAT_COUNT);
+	return dispatch(request, result, STAT_RECV_QUEUE);
 }
