@@ -14,7 +14,11 @@ ZBX_METRIC *zbx_module_item_list()
     { "sockets.tcp6.recvq",         CF_HAVEPARAMS,  SOCKETS_TCP6_RECVQ,         NULL },
     { "sockets.tcp6.sendq",         CF_HAVEPARAMS,  SOCKETS_TCP6_SENDQ,         NULL },
     { "sockets.udp.count",          CF_HAVEPARAMS,  SOCKETS_UDP_COUNT,          NULL },
+    { "sockets.udp.recvq",          CF_HAVEPARAMS,  SOCKETS_UDP_RECVQ,          NULL },
+    { "sockets.udp.sendq",          CF_HAVEPARAMS,  SOCKETS_UDP_SENDQ,          NULL },
     { "sockets.udp6.count",         CF_HAVEPARAMS,  SOCKETS_UDP6_COUNT,         NULL },
+    { "sockets.udp6.recvq",         CF_HAVEPARAMS,  SOCKETS_UDP6_RECVQ,         NULL },
+    { "sockets.udp6.sendq",         CF_HAVEPARAMS,  SOCKETS_UDP6_SENDQ,         NULL },
     { "sockets.unix.count",         CF_HAVEPARAMS,  SOCKETS_UNIX_COUNT,         NULL },
     { NULL }
   };
