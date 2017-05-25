@@ -55,10 +55,12 @@ int SOCKETS_UNIX_COUNT(AGENT_REQUEST *request, AGENT_RESULT *result)
 		SET_MSG_RESULT(result, zbx_dsprintf(NULL, "Failed to open %s: %s", path, zbx_strerror(errno)));
 		return res;
 	}
+	if (NULL == fgets(buf, sizeof(buf), f)) {
+		// discard header - errors handled later
+	}
 
-	fgets(buf, sizeof(buf), f); // discard headers
 	while (fgets(buf, sizeof(buf), f)) {
-		if (4 == sscanf(buf, "%p: %lX %*lX %lX %*X %X %*lu %*s\n",
+		if (4 == sscanf(buf, "%p: %lX %*X %lX %*X %X %*u %*s\n",
 								&slot, &refcnt, &flags, &state)
 		) {
 			if (state == SS_UNCONNECTED && (flags & SO_ACCEPTCON)) {

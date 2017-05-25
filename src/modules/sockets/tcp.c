@@ -59,8 +59,10 @@ static int sockets_tcp_count(
 		SET_MSG_RESULT(result, zbx_dsprintf(NULL, "Failed to open %s: %s", path, zbx_strerror(errno)));
 		return res;
 	}
+	if (NULL == fgets(buf, sizeof(buf), f)) {
+		// discard header - errors handled later
+	}
 
-	fgets(buf, sizeof(buf), f); // discard headers
 	while (fgets(buf, sizeof(buf), f)) {
 		if (8 == sscanf(buf, "%d: %64[0-9A-Fa-f]:%X %64[0-9A-Fa-f]:%X %X %lX:%lX %*s\n",
 										&slot, local_addr, &local_port,
