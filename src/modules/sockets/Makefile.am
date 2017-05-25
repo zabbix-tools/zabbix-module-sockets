@@ -3,7 +3,8 @@ lib_LTLIBRARIES = libzbxsockets.la
 libzbxsockets_la_SOURCES = \
 	libzbxsockets.h \
 	libzbxsockets.c \
-	tcp.c
+	tcp.c \
+	unix.c
 
 libzbxsockets_la_CFLAGS = \
 	$(DBUS_CPPFLAGS) \

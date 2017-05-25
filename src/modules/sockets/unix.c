@@ -1,36 +1,32 @@
 #include "libzbxsockets.h"
 
+#define SO_ACCEPTCON    (1<<16)
+#define SS_UNCONNECTED	1
+#define SS_LISTENING	5
+
 // supported state parameter values
-static char *TCP_STATE[] = {
-	"",
-	"ESTABLISHED",
-	"SYN_SENT",
-	"SYN_RECV",
-	"FIN_WAIT1",
-	"FIN_WAIT2",
-	"TIME_WAIT",
-	"CLOSE",
-	"CLOSE_WAIT",
-	"LAST_ACK",
-	"LISTEN",
-	"CLOSING",
+static char *UNIX_STATE[] = {
+	"FREE",
+	"UNCONNECTED",
+	"CONNECTING",
+	"CONNECTED",
+	"DISCONNECTING",
+	"LISTENING",
 };
 
-static int sockets_tcp_count(
-						AGENT_REQUEST *request,
-						AGENT_RESULT *result,
-						const char *path)
+int SOCKETS_UNIX_COUNT(AGENT_REQUEST *request, AGENT_RESULT *result)
 {
 	int				res = SYSINFO_RET_FAIL, count = 0;
+	const char		*path = "/proc/net/unix";
 	FILE			*f = NULL;
 	char			buf[4096];
 
 	char			*c, *param_state;
 	int				i, ok, filter_state;
 
-	char			local_addr[128], remote_addr[128];
-	int				slot, local_port, remote_port, state;
-	unsigned long	tx_queue, rx_queue;
+	void			*slot;
+	int				state;
+	unsigned long	flags, refcnt;
 
 	if (1 < request->nparam) {
 		SET_MSG_RESULT(result, strdup("Invalid number of parameters."));
@@ -38,18 +34,18 @@ static int sockets_tcp_count(
 	}
 
 	// validate state parameter
-	filter_state = 0;
+	filter_state = -1;
 	if ((param_state = get_rparam(request, 0))) {
 		for (c = param_state; c && *c; c++) {
 			*c = toupper(*c);
 		}
-		for (i = 1; i < 12; i++) {
-			if (0 == strncmp(TCP_STATE[i], param_state, 12)) {
+		for (i = 0; i < 6; i++) {
+			if (0 == strncmp(UNIX_STATE[i], param_state, 14)) {
 				filter_state = i;
 				break;
 			}			
-			if (i == 11) {
-				SET_MSG_RESULT(result, strdup("Invalid TCP state."));
+			if (i == 5) {
+				SET_MSG_RESULT(result, strdup("Invalid Unix socket state."));
 				return res;
 			}
 		}
@@ -62,13 +58,15 @@ static int sockets_tcp_count(
 
 	fgets(buf, sizeof(buf), f); // discard headers
 	while (fgets(buf, sizeof(buf), f)) {
-		if (8 == sscanf(buf, "%d: %64[0-9A-Fa-f]:%X %64[0-9A-Fa-f]:%X %X %lX:%lX %*s\n",
-										&slot, local_addr, &local_port,
-										remote_addr, &remote_port, &state,
-										&tx_queue, &rx_queue)
+		if (4 == sscanf(buf, "%p: %lX %*lX %lX %*X %X %*lu %*s\n",
+								&slot, &refcnt, &flags, &state)
 		) {
+			if (state == SS_UNCONNECTED && (flags & SO_ACCEPTCON)) {
+				state = SS_LISTENING;
+			}
+
 			ok = 1;
-			if (filter_state) {
+			if (-1 < filter_state) {
 				if (filter_state != state) {
 					ok = 0;
 				}
@@ -89,14 +87,4 @@ static int sockets_tcp_count(
 	SET_UI64_RESULT(result, count);
 	res = SYSINFO_RET_OK;
 	return res;
-}
-
-int SOCKETS_TCP_COUNT(AGENT_REQUEST *request, AGENT_RESULT *result)
-{
-	return sockets_tcp_count(request, result, "/proc/net/tcp");
-}
-
-int SOCKETS_TCP6_COUNT(AGENT_REQUEST *request, AGENT_RESULT *result)
-{
-	return sockets_tcp_count(request, result, "/proc/net/tcp6");
 }

@@ -27,6 +27,9 @@ sockets.tcp.count[<state>]                  return the number of tcp sockets in
 sockets.tcp6.count[<state>]                 return the number of ipv4 tcp
                                             sockets in the given state
 
+sockets.unix.count[<state>]                 returns the number of unix sockets
+                                            in the given state
+
 sockets.modver[]                            version of the loaded module
 ```
 
@@ -51,12 +54,39 @@ returned.
 
 E.g.
 
-    $ zabbix_get -s 127.0.0.1 -k sockets.tcp.count[listen]
-    sockets.tcp.count[listen]                     [u|6]
+    $ zabbix_agentd -t sockets.tcp.count[listen]
+    sockets.tcp.count[listen]                     [u|2]
 
     $ netstat -tl4
+    Active Internet connections (only servers)
+    Proto Recv-Q Send-Q Local Address           Foreign Address         State
     tcp        0      0 0.0.0.0:ssh             0.0.0.0:*               LISTEN
     tcp        0      0 0.0.0.0:zabbix-agent    0.0.0.0:*               LISTEN
 
 For greater understanding, see the [TCP/IP State Transition Diagram](http://www.cs.northwestern.edu/~agupta/cs340/project2/TCPIP_State_Transition_Diagram.pdf)
 by Gordon McKinney, 2002.
+
+### sockets.unix.count
+
+Supported states include:
+
+- `FREE`
+- `UNCONNECTED`
+- `CONNECTING`
+- `CONNECTED`
+- `DISCONNECTING`
+- `LISTENING`
+
+E.g.
+
+    $ zabbix_agentd -t sockets.unix.count[listening]
+    sockets.unix.count[listening]                 [u|33]
+
+    $ netstat -xl
+    Active UNIX domain sockets (only servers)
+    Proto RefCnt Flags       Type       State         I-Node   Path
+    unix  2      [ ACC ]     STREAM     LISTENING     17910    private/tlsmgr
+    unix  2      [ ACC ]     STREAM     LISTENING     17914    private/rewrite
+    unix  2      [ ACC ]     STREAM     LISTENING     17917    private/bounce
+    ...
+

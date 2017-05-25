@@ -9,6 +9,7 @@ ZBX_METRIC *zbx_module_item_list()
     { "sockets.modver",             0,              SOCKETS_MODVER,             NULL },
     { "sockets.tcp.count",          CF_HAVEPARAMS,  SOCKETS_TCP_COUNT,          NULL },
     { "sockets.tcp6.count",         CF_HAVEPARAMS,  SOCKETS_TCP6_COUNT,         NULL },
+    { "sockets.unix.count",         CF_HAVEPARAMS,  SOCKETS_UNIX_COUNT,         NULL },
     { NULL }
   };
 
