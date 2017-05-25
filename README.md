@@ -21,21 +21,48 @@ $ sudo make prefix=/usr sysconfdir=/etc libdir=/usr/lib64 install
 ## Keys
 
 ```
-sockets.tcp.count[<state>]                  return the number of tcp sockets in
-                                            the given state
+sockets.tcp.count[<state>]      return the number of tcp sockets in the given
+                                state
 
-sockets.tcp6.count[<state>]                 return the number of ipv4 tcp
-                                            sockets in the given state
+sockets.tcp.sendq[<state>]      returns the total sum of all buffers in the send
+                                queue for all tcp sockets in the given state
 
+sockets.tcp.recvq[<state>]      returns the total sum of all buffers in the
+                                receive queue for all tcp sockets in the given
+                                state
 
-sockets.udp.count[<state>]                  return the number of udp sockets in
-                                            the given state
+sockets.tcp6.count[<state>]     return the number of ipv4 tcp sockets in the
+                                given state
 
-sockets.udp6.count[<state>]                 return the number of ipv6 udp
-                                            sockets in the given state
+sockets.tcp6.sendq[<state>]     returns the total sum of all buffers in the send
+                                queue for all tcp6 sockets in the given state
 
-sockets.unix.count[<state>]                 returns the number of unix sockets
-                                            in the given state
+sockets.tcp6.recvq[<state>]     returns the total sum of all buffers in the
+                                receive queue for all tcp6 sockets in the given
+                                state
+
+sockets.udp.count[<state>]      return the number of udp sockets in the given
+                                state
+
+sockets.udp.sendq[<state>]      returns the total sum of all buffers in the send
+                                queue for all udp sockets in the given state
+
+sockets.udp.recvq[<state>]      returns the total sum of all buffers in the
+                                receive queue for all udp sockets in the given
+                                state
+
+sockets.udp6.count[<state>]     return the number of ipv6 udp sockets in the
+                                given state
+
+sockets.udp6.sendq[<state>]     returns the total sum of all buffers in the send
+                                queue for all udp6 sockets in the given state
+
+sockets.udp6.recvq[<state>]     returns the total sum of all buffers in the
+                                receive queue for all udp6 sockets in the given
+                                state
+
+sockets.unix.count[<state>]     returns the number of unix sockets in the given
+                                state
 
 sockets.modver[]                            version of the loaded module
 ```
