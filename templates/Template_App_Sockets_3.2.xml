@@ -32,8 +32,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[tcp,close_wait]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -75,8 +75,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[tcp,closing]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -118,8 +118,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[tcp,established]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -161,8 +161,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[tcp,fin_wait1]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -204,8 +204,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[tcp,fin_wait2]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -247,8 +247,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[tcp,last_ack]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -290,8 +290,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[tcp,listen]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -333,8 +333,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[tcp,syn_recv]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -376,8 +376,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[tcp,syn_sent]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -419,8 +419,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[tcp,time_wait]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -462,8 +462,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[tcp6,close_wait]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -505,8 +505,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[tcp6,closing]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -548,8 +548,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[tcp6,established]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -591,8 +591,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[tcp6,fin_wait1]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -634,8 +634,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[tcp6,fin_wait2]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -677,8 +677,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[tcp6,last_ack]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -720,8 +720,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[tcp6,listen]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -763,8 +763,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[tcp6,syn_recv]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -806,8 +806,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[tcp6,syn_sent]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -849,8 +849,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[tcp6,time_wait]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -892,8 +892,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[tcp6]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -935,8 +935,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[tcp]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -978,8 +978,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[udp,listen]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -1021,8 +1021,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[udp6,listen]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -1064,8 +1064,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[unix,connected]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -1107,8 +1107,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[unix,connecting]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -1150,8 +1150,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[unix,disconnecting]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -1193,8 +1193,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[unix,free]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -1236,8 +1236,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[unix,listening]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -1279,8 +1279,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[unix,unconnected]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -1322,8 +1322,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.count[unix]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -1365,8 +1365,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.recvq[tcp6]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -1408,8 +1408,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.recvq[tcp]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -1451,8 +1451,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.recvq[udp6]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -1494,8 +1494,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.recvq[udp]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -1537,8 +1537,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.sendq[tcp6]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -1580,8 +1580,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.sendq[tcp]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -1623,8 +1623,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.sendq[udp6]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
@@ -1666,8 +1666,8 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>sockets.sendq[udp]</key>
-                    <delay>30</delay>
-                    <history>90</history>
+                    <delay>60</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
