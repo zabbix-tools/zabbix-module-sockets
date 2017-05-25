@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <errno.h>
 #include <ctype.h>
+#include <arpa/inet.h>
 
 // Zabbix source headers
 #define HAVE_TIME_H 1
@@ -31,5 +32,6 @@ int timeout;
 
 // tcp items
 int SOCKETS_TCP_COUNT(AGENT_REQUEST*, AGENT_RESULT*);
+int SOCKETS_TCP6_COUNT(AGENT_REQUEST*, AGENT_RESULT*);
 
 #endif

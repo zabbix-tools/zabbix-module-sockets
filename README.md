@@ -24,6 +24,9 @@ $ sudo make prefix=/usr sysconfdir=/etc libdir=/usr/lib64 install
 sockets.tcp.count[<state>]                  return the number of tcp sockets in
                                             the given state
 
+sockets.tcp6.count[<state>]                 return the number of ipv4 tcp
+                                            sockets in the given state
+
 sockets.modver[]                            version of the loaded module
 ```
 
@@ -33,15 +36,15 @@ Supported states include:
 
 - `ESTABLISHED`
 - `SYN_SENT`
--	`SYN_RECV`
--	`FIN_WAIT1`
--	`FIN_WAIT2`
--	`TIME_WAIT`
--	`CLOSE`
--	`CLOSE_WAIT`
--	`LAST_ACK`
--	`LISTEN`
--	`CLOSING`
+- `SYN_RECV`
+- `FIN_WAIT1`
+- `FIN_WAIT2`
+- `TIME_WAIT`
+- `CLOSE`
+- `CLOSE_WAIT`
+- `LAST_ACK`
+- `LISTEN`
+- `CLOSING`
 
 If the state parameter is empty, all the total number of sockets in any state is
 returned.
