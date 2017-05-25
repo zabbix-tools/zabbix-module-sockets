@@ -1,6 +1,6 @@
 Name          : zabbix-module-sockets
 Vendor        : cavaliercoder
-Version       : 1.0.0
+Version       : 1.1.0
 Release       : 1
 Summary       : Linux socket monitoring module for Zabbix
 
@@ -43,5 +43,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_docdir}/%{name}-%{version}/COPYING
 
 %changelog
+* Thu May 25 2017 Ryan Armstrong <ryan@cavaliercoder.com> 1.1.0-1
+- Added sockets.tcp6.count
+- Added sockets.unix.count
+
 * Wed May 24 2017 Ryan Armstrong <ryan@cavaliercoder.com> 1.0.0-1
 - Initial release
