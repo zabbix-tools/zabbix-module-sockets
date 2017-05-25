@@ -27,6 +27,13 @@ sockets.tcp.count[<state>]                  return the number of tcp sockets in
 sockets.tcp6.count[<state>]                 return the number of ipv4 tcp
                                             sockets in the given state
 
+
+sockets.udp.count[<state>]                  return the number of udp sockets in
+                                            the given state
+
+sockets.udp6.count[<state>]                 return the number of ipv6 udp
+                                            sockets in the given state
+
 sockets.unix.count[<state>]                 returns the number of unix sockets
                                             in the given state
 

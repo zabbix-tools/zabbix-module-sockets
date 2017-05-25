@@ -24,6 +24,12 @@ sockets.tcp6.count[CLOSE_WAIT]
 sockets.tcp6.count[LAST_ACK]
 sockets.tcp6.count[LISTEN]
 sockets.tcp6.count[CLOSING]
+sockets.udp.count
+sockets.udp.count[ESTABLISHED]
+sockets.udp.count[LISTEN]
+sockets.udp6.count
+sockets.udp6.count[ESTABLISHED]
+sockets.udp6.count[LISTEN]
 sockets.unix.count
 sockets.unix.count[FREE]
 sockets.unix.count[UNCONNECTED]
