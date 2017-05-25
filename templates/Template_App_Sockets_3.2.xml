@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.2</version>
-    <date>2017-05-25T11:33:55Z</date>
+    <date>2017-05-25T14:12:13Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -21,19 +21,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
             </groups>
             <applications>
                 <application>
-                    <name>TCP6 sockets</name>
-                </application>
-                <application>
-                    <name>TCP sockets</name>
-                </application>
-                <application>
-                    <name>UDP6 sockets</name>
-                </application>
-                <application>
-                    <name>UDP sockets</name>
-                </application>
-                <application>
-                    <name>Unix sockets</name>
+                    <name>Sockets</name>
                 </application>
             </applications>
             <items>
@@ -74,7 +62,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -117,7 +105,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -160,7 +148,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -203,7 +191,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -246,7 +234,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -289,7 +277,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -332,7 +320,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -375,7 +363,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -418,7 +406,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -461,7 +449,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -504,7 +492,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP6 sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -547,7 +535,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP6 sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -590,7 +578,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP6 sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -633,7 +621,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP6 sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -676,7 +664,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP6 sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -719,7 +707,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP6 sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -762,7 +750,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP6 sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -805,7 +793,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP6 sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -848,7 +836,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP6 sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -891,7 +879,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP6 sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -934,7 +922,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP6 sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -977,7 +965,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -1020,7 +1008,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>UDP sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -1063,7 +1051,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>UDP6 sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -1106,7 +1094,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Unix sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -1149,7 +1137,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Unix sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -1192,7 +1180,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Unix sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -1235,7 +1223,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Unix sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -1278,7 +1266,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Unix sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -1321,7 +1309,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Unix sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -1364,7 +1352,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>Unix sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -1407,7 +1395,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP6 sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -1450,7 +1438,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -1493,7 +1481,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>UDP6 sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -1536,7 +1524,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>UDP sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -1579,7 +1567,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP6 sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -1622,7 +1610,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>TCP sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -1665,7 +1653,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>UDP6 sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -1708,7 +1696,7 @@ Requires zabbix-module-sockets to be installed on all monitored agents.com/caval
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>UDP sockets</name>
+                            <name>Sockets</name>
                         </application>
                     </applications>
                     <valuemap/>
