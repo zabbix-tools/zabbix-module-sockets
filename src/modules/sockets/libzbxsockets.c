@@ -8,7 +8,11 @@ ZBX_METRIC *zbx_module_item_list()
   {
     { "sockets.modver",             0,              SOCKETS_MODVER,             NULL },
     { "sockets.tcp.count",          CF_HAVEPARAMS,  SOCKETS_TCP_COUNT,          NULL },
+    { "sockets.tcp.recvq",          CF_HAVEPARAMS,  SOCKETS_TCP_RECVQ,          NULL },
+    { "sockets.tcp.sendq",          CF_HAVEPARAMS,  SOCKETS_TCP_SENDQ,          NULL },
     { "sockets.tcp6.count",         CF_HAVEPARAMS,  SOCKETS_TCP6_COUNT,         NULL },
+    { "sockets.tcp6.recvq",         CF_HAVEPARAMS,  SOCKETS_TCP6_RECVQ,         NULL },
+    { "sockets.tcp6.sendq",         CF_HAVEPARAMS,  SOCKETS_TCP6_SENDQ,         NULL },
     { "sockets.udp.count",          CF_HAVEPARAMS,  SOCKETS_UDP_COUNT,          NULL },
     { "sockets.udp6.count",         CF_HAVEPARAMS,  SOCKETS_UDP6_COUNT,         NULL },
     { "sockets.unix.count",         CF_HAVEPARAMS,  SOCKETS_UNIX_COUNT,         NULL },
