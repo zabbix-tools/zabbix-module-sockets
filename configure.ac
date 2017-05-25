@@ -1,4 +1,4 @@
-AC_INIT([zabbix-module-sockets], [1.2.0], [ryan@cavaliercoder.com])
+AC_INIT([zabbix-module-sockets], [1.0.0], [ryan@cavaliercoder.com])
 AM_INIT_AUTOMAKE([-Wall -Werror -Wno-portability foreign])
 m4_pattern_allow([AM_PROG_AR])
 AM_PROG_AR
@@ -29,6 +29,7 @@ AC_CONFIG_FILES([
  Makefile
  selinux/Makefile
  src/modules/sockets/Makefile
+ templates/Makefile
 ])
 AC_OUTPUT
 

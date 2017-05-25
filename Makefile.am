@@ -2,7 +2,8 @@ ACLOCAL_AMFLAGS = -Im4
 
 SUBDIRS = \
 	selinux \
-	src/modules/sockets
+	src/modules/sockets \
+	templates
 
 EXTRA_DIST = \
 	README.md \
