@@ -82,12 +82,12 @@ Supported states include:
 - `CONNECTING`
 - `CONNECTED`
 - `DISCONNECTING`
-- `LISTENING`
+- `LISTEN`
 
 E.g.
 
-    $ zabbix_agentd -t sockets.unix.count[listening]
-    sockets.unix.count[listening]                 [u|33]
+    $ zabbix_agentd -t sockets.unix.count[listen]
+    sockets.unix.count[listen]                    [u|33]
 
     $ netstat -xl
     Active UNIX domain sockets (only servers)
@@ -96,4 +96,3 @@ E.g.
     unix  2      [ ACC ]     STREAM     LISTENING     17914    private/rewrite
     unix  2      [ ACC ]     STREAM     LISTENING     17917    private/bounce
     ...
-
