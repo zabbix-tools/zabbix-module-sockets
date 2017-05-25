@@ -14,10 +14,9 @@ static char *UNIX_STATE[] = {
 	"LISTEN",
 };
 
-int SOCKETS_UNIX_COUNT(AGENT_REQUEST *request, AGENT_RESULT *result)
+int unix_count(AGENT_REQUEST *request, AGENT_RESULT *result)
 {
 	int				res = SYSINFO_RET_FAIL, count = 0;
-	const char		*path = "/proc/net/unix";
 	FILE			*f = NULL;
 	char			buf[4096];
 
@@ -28,14 +27,14 @@ int SOCKETS_UNIX_COUNT(AGENT_REQUEST *request, AGENT_RESULT *result)
 	int				state;
 	unsigned long	flags, refcnt;
 
-	if (1 < request->nparam) {
+	if (2 < request->nparam) {
 		SET_MSG_RESULT(result, strdup("Invalid number of parameters."));
 		return res;
 	}
 
 	// validate state parameter
 	filter_state = -1;
-	if ((param_state = get_rparam(request, 0))) {
+	if ((param_state = get_rparam(request, 1))) {
 		for (c = param_state; c && *c; c++) {
 			*c = toupper(*c);
 		}
@@ -51,12 +50,9 @@ int SOCKETS_UNIX_COUNT(AGENT_REQUEST *request, AGENT_RESULT *result)
 		}
 	}
 
-	if (NULL == (f = fopen(path, "r"))) {
-		SET_MSG_RESULT(result, zbx_dsprintf(NULL, "Failed to open %s: %s", path, zbx_strerror(errno)));
+	if (NULL == (f = fopen(_PATH_PROCNET_UNIX, "r"))) {
+		SET_MSG_RESULT(result, zbx_dsprintf(NULL, "Failed to open " _PATH_PROCNET_UNIX ": %s", zbx_strerror(errno)));
 		return res;
-	}
-	if (NULL == fgets(buf, sizeof(buf), f)) {
-		// discard header - errors handled later
 	}
 
 	while (fgets(buf, sizeof(buf), f)) {
@@ -81,7 +77,7 @@ int SOCKETS_UNIX_COUNT(AGENT_REQUEST *request, AGENT_RESULT *result)
 
 	if (ferror(f)) {
 		fclose(f);
-		SET_MSG_RESULT(result, zbx_dsprintf("Error reading %s: %s", path, zbx_strerror(errno)));
+		SET_MSG_RESULT(result, zbx_dsprintf("Error reading " _PATH_PROCNET_UNIX ": %s", zbx_strerror(errno)));
 		return res;
 	}
 

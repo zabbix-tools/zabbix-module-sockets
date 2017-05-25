@@ -6,13 +6,6 @@ enum
 	TCP_LISTEN = 0x0A
 };
 
-enum
-{
-	STAT_COUNT,
-	STAT_SEND_QUEUE,
-	STAT_RECV_QUEUE
-};
-
 // supported state parameter values
 static char *TCP_STATES[] = {
 	"", "ESTABLISHED", "SYN_SENT", "SYN_RECV", "FIN_WAIT1",	"FIN_WAIT2",
@@ -35,12 +28,12 @@ static int isnull(const char *c, size_t n)
 	return 1;
 }
 
-static int tcp_stat(
-						AGENT_REQUEST *request,
-						AGENT_RESULT *result,
-						const char *path,
-						int proto,
-						int stat)
+int tcp_stat(
+		AGENT_REQUEST *request,
+		AGENT_RESULT *result,
+		const char *path,
+		int proto,
+		int stat)
 {
 	int				res = SYSINFO_RET_FAIL, count, tx_queue_total, rx_queue_total;
 	FILE			*f = NULL;
@@ -64,16 +57,17 @@ static int tcp_stat(
 		
 		default:
 			THIS_SHOULD_NEVER_HAPPEN;
+			return SYSINFO_RET_FAIL;
 	}
 
-	if (1 < request->nparam) {
+	if (2 < request->nparam) {
 		SET_MSG_RESULT(result, strdup("Invalid number of parameters."));
 		return res;
 	}
 
 	// validate state parameter
 	filter_state = 0;
-	if ((param_state = get_rparam(request, 0))) {
+	if ((param_state = get_rparam(request, 1))) {
 		for (c = param_state; c && *c; c++) {
 			*c = toupper(*c);
 		}
@@ -154,65 +148,4 @@ static int tcp_stat(
 	}
 
 	return res;
-}
-
-
-int SOCKETS_TCP_COUNT(AGENT_REQUEST *request, AGENT_RESULT *result)
-{
-	return tcp_stat(request, result, _PATH_PROCNET_TCP, IPPROTO_TCP, STAT_COUNT);
-}
-
-int SOCKETS_TCP_RECVQ(AGENT_REQUEST *request, AGENT_RESULT *result)
-{
-	return tcp_stat(request, result, _PATH_PROCNET_TCP, IPPROTO_TCP, STAT_RECV_QUEUE);
-}
-
-int SOCKETS_TCP_SENDQ(AGENT_REQUEST *request, AGENT_RESULT *result)
-{
-	return tcp_stat(request, result, _PATH_PROCNET_TCP, IPPROTO_TCP, STAT_SEND_QUEUE);
-}
-
-int SOCKETS_TCP6_COUNT(AGENT_REQUEST *request, AGENT_RESULT *result)
-{
-	return tcp_stat(request, result, _PATH_PROCNET_TCP6, IPPROTO_TCP, STAT_COUNT);
-}
-
-int SOCKETS_TCP6_RECVQ(AGENT_REQUEST *request, AGENT_RESULT *result)
-{
-	return tcp_stat(request, result, _PATH_PROCNET_TCP6, IPPROTO_TCP, STAT_RECV_QUEUE);
-}
-
-int SOCKETS_TCP6_SENDQ(AGENT_REQUEST *request, AGENT_RESULT *result)
-{
-	return tcp_stat(request, result, _PATH_PROCNET_TCP6, IPPROTO_TCP, STAT_SEND_QUEUE);
-}
-
-int SOCKETS_UDP_COUNT(AGENT_REQUEST *request, AGENT_RESULT *result)
-{
-	return tcp_stat(request, result, _PATH_PROCNET_UDP, IPPROTO_UDP, STAT_COUNT);
-}
-
-int SOCKETS_UDP_RECVQ(AGENT_REQUEST *request, AGENT_RESULT *result)
-{
-	return tcp_stat(request, result, _PATH_PROCNET_UDP, IPPROTO_UDP, STAT_RECV_QUEUE);
-}
-
-int SOCKETS_UDP_SENDQ(AGENT_REQUEST *request, AGENT_RESULT *result)
-{
-	return tcp_stat(request, result, _PATH_PROCNET_UDP, IPPROTO_UDP, STAT_SEND_QUEUE);
-}
-
-int SOCKETS_UDP6_COUNT(AGENT_REQUEST *request, AGENT_RESULT *result)
-{
-	return tcp_stat(request, result, _PATH_PROCNET_UDP6, IPPROTO_UDP, STAT_COUNT);
-}
-
-int SOCKETS_UDP6_RECVQ(AGENT_REQUEST *request, AGENT_RESULT *result)
-{
-	return tcp_stat(request, result, _PATH_PROCNET_UDP6, IPPROTO_UDP, STAT_RECV_QUEUE);
-}
-
-int SOCKETS_UDP6_SENDQ(AGENT_REQUEST *request, AGENT_RESULT *result)
-{
-	return tcp_stat(request, result, _PATH_PROCNET_UDP6, IPPROTO_UDP, STAT_SEND_QUEUE);
 }
