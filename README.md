@@ -3,6 +3,8 @@
 zabbix-module-sockets is a loadable Zabbix module that enables Zabbix to query
 the state of sockets - including tcp, udp, unix, raw, etc.
 
+![Screenshot - TCP Sockets screen](assets/tcp-sockets.png)
+
 ## Install
 
 ```bash
