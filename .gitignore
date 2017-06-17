@@ -48,3 +48,4 @@ Makefile
 missing
 stamp-h1
 zabbix_agent_bench
+templates/*_2.0.xml
