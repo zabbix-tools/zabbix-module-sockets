@@ -1,7 +1,7 @@
 # zabbix-module-sockets
 
-zabbix-module-sockets is a loadable Zabbix module that enables Zabbix to query
-the state of sockets - including tcp, udp, unix, raw, etc.
+zabbix-module-sockets is a loadable Zabbix module and templates that enables
+Zabbix to query the state of sockets - including tcp, udp, unix, raw, etc.
 
 ![Screenshot - TCP Sockets screen](assets/tcp-sockets.png)
 
@@ -27,6 +27,9 @@ installation directories as follows:
 ```
 $ sudo make prefix=/usr sysconfdir=/etc libdir=/usr/lib64 install
 ```
+
+The templates will be installed to `/usr/share/doc/zabbix-module-sockets-1.1.0`
+and can be imported into Zabbix from _Configuration > Templates > Import_.
 
 ## Keys
 
