@@ -1,6 +1,6 @@
 Name          : zabbix-module-sockets
 Vendor        : cavaliercoder
-Version       : 1.0.0
+Version       : 1.1.0
 Release       : 1
 Summary       : Linux socket monitoring module for Zabbix
 
@@ -38,11 +38,19 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %{_libdir}/zabbix/modules/%{module}.so
 %{_sysconfdir}/zabbix/zabbix_agentd.d/%{module}.conf
-%{_datarootdir}/selinux/packages/%{name}/%{module}.pp
 %{_docdir}/%{name}-%{version}/README.md
 %{_docdir}/%{name}-%{version}/COPYING
-%{_docdir}/%{name}-%{version}/Template_App_Sockets_3.2.xml
+%{_docdir}/%{name}-%{version}/Template_App_TCP_Sockets_3.2.xml
+%{_docdir}/%{name}-%{version}/Template_App_UDP_Sockets_3.2.xml
+%{_docdir}/%{name}-%{version}/Template_App_TCP6_Sockets_3.2.xml
+%{_docdir}/%{name}-%{version}/Template_App_UDP6_Sockets_3.2.xml
+%{_docdir}/%{name}-%{version}/Template_App_Unix_Sockets_3.2.xml
 
 %changelog
+* Sun Jun 18 2017 Ryan Armstrong <ryan@cavaliercoder.com> 1.1.0-1
+- Addeded support for TCP, TCP6, UDP, UDP6 and Unix sockets
+- Added support for measuring Send-Q and Recv-Q
+- Separated templates for each protocol
+
 * Thu May 25 2017 Ryan Armstrong <ryan@cavaliercoder.com> 1.0.0-1
 - Initial release

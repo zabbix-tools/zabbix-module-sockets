@@ -1,7 +1,6 @@
 ACLOCAL_AMFLAGS = -Im4
 
 SUBDIRS = \
-	selinux \
 	src/modules/sockets \
 	templates
 

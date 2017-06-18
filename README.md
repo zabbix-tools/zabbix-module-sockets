@@ -7,6 +7,14 @@ the state of sockets - including tcp, udp, unix, raw, etc.
 
 ## Install
 
+The following packages are available for download:
+
+- [zabbix-module-sockets-1.1.0.tar.gz](http://cdn.cavaliercoder.com/zabbix-contrib/release/zabbix-module-sockets-1.1.0.tar.gz)
+
+- [zabbix-module-sockets-1.1.0-1.x86_64.rpm](http://cdn.cavaliercoder.com/zabbix-contrib/rhel/7/x86_64/zabbix-module-sockets-1.1.0-1.x86_64.rpm)
+
+To install from source:
+
 ```bash
 $ ./configure --with-zabbix=/usr/src/zabbix-3.2.5
 $ make
