@@ -121,7 +121,7 @@ int tcp_stat(
 
 	if (ferror(f)) {
 		fclose(f);
-		SET_MSG_RESULT(result, zbx_dsprintf("Error reading %s: %s", path, zbx_strerror(errno)));
+		SET_MSG_RESULT(result, zbx_dsprintf(NULL, "Error reading %s: %s", path, zbx_strerror(errno)));
 		return res;
 	}
 

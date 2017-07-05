@@ -77,7 +77,7 @@ int unix_count(AGENT_REQUEST *request, AGENT_RESULT *result)
 
 	if (ferror(f)) {
 		fclose(f);
-		SET_MSG_RESULT(result, zbx_dsprintf("Error reading " _PATH_PROCNET_UNIX ": %s", zbx_strerror(errno)));
+		SET_MSG_RESULT(result, zbx_dsprintf(NULL, "Error reading " _PATH_PROCNET_UNIX ": %s", zbx_strerror(errno)));
 		return res;
 	}
 
