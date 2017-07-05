@@ -51,7 +51,7 @@ echo
 echo "************************************************************"
 echo "*                 Now run '${am_make} install'                   *"
 echo "*                                                          *"
-echo "*            Thank you for using libzbxsystemd!            *"
+echo "*            Thank you for using libzbxsockets!            *"
 echo "*               <http://cavaliercoder.com>                 *"
 echo "************************************************************"
 echo

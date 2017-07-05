@@ -43,7 +43,7 @@ sockets.sendq[protocol,<state>] returns the sum of all buffers in the send queue
 sockets.recvq[protocol,<state>] returns the sum of all buffers in the receive
                                 queue for sockets of the given protocol
 
-sockets.modver[]                version of the loaded module
+sockets.modver                  version of the loaded module
 ```
 
 ### Supported protocols
